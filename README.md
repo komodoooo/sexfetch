@@ -1,2 +1,2 @@
 # sexfetch
-CLI system information tool for unix-like operating systems
+Sexfetch is a command line system information tool for unix-like operating systems written in C
