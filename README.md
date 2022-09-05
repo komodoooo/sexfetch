@@ -7,3 +7,5 @@ You only need _**gcc**_, _**make**_ and _**git**_ (`sudo apt install make gcc gi
 * `git clone https://github.com/komodoooo/sexfetch`
 * `cd sexfetch`
 * `sudo make`
+
+After that, you can use the _`sexfetch`_ command anywhere.
