@@ -1,5 +1,6 @@
 no-bloat:
-	gcc sexfetch.c -o sexfetch
+	gcc -w sexfetch.c -o sexfetch
 	cp sexfetch /sexfetch
 	echo "alias sexfetch='./sexfetch'" >> ~/.bashrc
+	clear
 	./sexfetch
