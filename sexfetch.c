@@ -33,5 +33,6 @@ int main(){
             printf("Shell: %s\n\n", sexium[i]);
         }   
     }
+    printf("Current process id: %d\n\n", getpid());
     return 0;
 }
