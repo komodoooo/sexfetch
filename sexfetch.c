@@ -11,6 +11,7 @@ void get_info(){
 }
 
 int main(){
+    int pid = getpid();
     char * banner = "       __\n" "    .-'  |\n" 
                     "   /   <\\|\n" "  /     \\'\n" 
                     "  |_.- o-o\n" "  / C  -._)\\\n"
@@ -33,6 +34,6 @@ int main(){
             printf("Shell: %s\n\n", sexium[i]);
         }   
     }
-    printf("Current process id: %d\n\n", getpid());
+    printf("Current process id: %d\n\n", pid);
     return 0;
 }
