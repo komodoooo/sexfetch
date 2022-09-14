@@ -8,6 +8,7 @@ void get_info(){
     printf("System: %s, %s\n",s.sysname,s.version);
     printf("Kernel: %s\nCpu Architecture: %s\n",s.release,s.machine);
     printf("Hostname: %s\n",s.nodename);
+    system("echo Ram: $(vmstat | awk 'END {printf $4}') Kb");
 }
 
 int main(){
