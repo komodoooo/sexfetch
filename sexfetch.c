@@ -10,13 +10,14 @@ void get_info(){
     printf("Kernel: %s\nCpu Architecture: %s\n",s.release,s.machine);
     printf("Hostname: %s\n",s.nodename);
     system("echo Ram: $(vmstat | awk 'END {printf $4}') Kb"); //get the ram
+    system("echo User: $(id -u -n)");          //no whoami
     const char * sexium[]={ 
-        "User",
+        "Terminal",
         "Home path",
         "Shell"
     };                                //dirty codes go! brrr
     const char * envs[]={
-        getenv("USER"),
+        getenv("TERM"),
         getenv("HOME"), 
         getenv("SHELL")
     };
@@ -27,13 +28,12 @@ void get_info(){
 }
 
 int main(){ 
-    char * banner = "       __\n" "    .-'  |\n" 
-                    "   /   <\\|\n" "  /     \\'\n"      //very smart logo
-                    "  |_.- o-o\n" "  / C  -._)\\\n"
-                    " /',        |\n" "|   `-,_,__,'\n"
-                    "(,,)====[_]=|\n" "  '.   ____/\n"
-                    "   | -|-|_\n" "   |____)_)";
-    printf("\r%s\n\n", banner);  
+    printf("\r       __\n" "    .-'  |\n" 
+        "   /   <\\|\n" "  /     \\'\n"      
+        "  |_.- o-o\n" "  / C  -._)\\\n"        //very smart logo
+        " /',        |\n" "|   `-,_,__,'\n"
+        "(,,)====[_]=|\n" "  '.   ____/\n"
+        "   | -|-|_\n" "   |____)_)\n\n");
     get_info();
     return 0;
 }
